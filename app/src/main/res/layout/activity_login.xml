@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".View.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/varela_round"
+        android:text="Login to continue"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edUsernametextfield"
+        app:helperTextTextColor="@color/design_default_color_error"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Username"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/varela_round"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edPasswordtextfield"
+        app:helperTextTextColor="@color/design_default_color_error"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Password"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:fontFamily="@font/varela_round"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:id="@+id/edPassword"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_margin="30dp"
+        android:text="Login"
+        android:fontFamily="@font/varela_round"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btnLogin"
+        android:layout_height="60dp" />
+</LinearLayout>
