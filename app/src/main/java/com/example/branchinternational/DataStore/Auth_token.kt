@@ -1,5 +1,7 @@
 package com.example.branchinternational.DataStore
 
-data class Auth_token(
-    var auth_token: String = ""
-)
+ class Auth_token {
+    companion object{
+        var auth_token: String = ""
+    }
+ }

@@ -43,6 +43,7 @@ class LoginActivity : AppCompatActivity() {
                        clientviewmodel.refresh(binding.edUsername.text.toString(),binding.edPassword.text.toString())
                        clientviewmodel.auth_tokenlogin.observe(this){ auth ->
                            if (auth.isSuccessful) {
+                               Auth_token.auth_token = auth.body()!!.auth_token
                               val i = Intent(this,MessageActivity::class.java)
                                startActivity(i)
                            }

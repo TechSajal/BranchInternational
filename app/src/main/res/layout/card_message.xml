@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#CCCECF"
+    android:elevation="3dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/body_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/varela_round"
+        android:maxEms="3"
+        android:maxLines="3"
+        android:text="I hv my transaction messages with me y am i not approved to this time? I urgently need the cash"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+
+    <FrameLayout
+        android:id="@+id/useridframe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/body_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/varela_round"
+            android:text="UserId:"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/userid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="58dp"
+            android:fontFamily="@font/varela_round"
+            android:text="999"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/useridframe">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/varela_round"
+            android:text="Created At:"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/createdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="90dp"
+            android:fontFamily="@font/varela_round"
+            android:text="30.12.2023 3.56 PM"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+    </FrameLayout>
+  </RelativeLayout>
+</androidx.cardview.widget.CardView>
