@@ -16,6 +16,9 @@
         android:theme="@style/Theme.BranchInternational"
         tools:targetApi="31">
         <activity
+            android:name=".View.SendingMessageActivity"
+            android:exported="false" />
+        <activity
             android:name=".View.MessageActivity"
             android:exported="false" />
         <activity

@@ -4,6 +4,7 @@ package com.example.branchinternational.View
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -40,9 +41,13 @@ class LoginActivity : AppCompatActivity() {
                }
                if (binding.edUsernametextfield.helperText == null && binding.edPasswordtextfield.helperText == null){
                    if (binding.edUsername.text.toString().contentEquals(binding.edPassword.text!!.reversed().toString())){
+                       binding.progressbarLogin.visibility = View.VISIBLE
+                       binding.progressbarLogin.isAnimating
                        clientviewmodel.refresh(binding.edUsername.text.toString(),binding.edPassword.text.toString())
                        clientviewmodel.auth_tokenlogin.observe(this){ auth ->
                            if (auth.isSuccessful) {
+                               binding.progressbarLogin.visibility = View.GONE
+                               Auth_token.auth_token = auth.body()!!.auth_token
                               val i = Intent(this,MessageActivity::class.java)
                                startActivity(i)
                            }

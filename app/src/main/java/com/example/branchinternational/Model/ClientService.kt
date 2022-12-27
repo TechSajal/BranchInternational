@@ -2,7 +2,6 @@ package com.example.branchinternational.Model
 
 import androidx.lifecycle.MutableLiveData
 import io.reactivex.Single
-import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -19,5 +18,13 @@ class ClientService {
 
     fun getAuthToken(username:String,password:String):Single<Response<Authentication>>{
         return api.userlogin(userpass(username,password))
+    }
+
+    fun getmessages(auth:String):Single<List<Messages>>{
+        return api.getmessage(auth)
+    }
+
+    fun sendmessage(auth: String,threadid: Int,body: String):Single<Response<Messages>>{
+        return api.sendmessage(auth,sendclientmessage(threadid,body))
     }
 }

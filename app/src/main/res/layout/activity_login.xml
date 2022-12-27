@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".View.LoginActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,4 +70,10 @@
         android:layout_gravity="center_horizontal"
         android:id="@+id/btnLogin"
         android:layout_height="60dp" />
+    <ProgressBar
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/progressbar_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
